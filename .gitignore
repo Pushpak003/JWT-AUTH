@@ -1,0 +1,30 @@
+# Node modules
+node_modules/
+
+# Env variables (DON'T push secrets!)
+.env
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs/
+*.log
+
+# OS-specific junk
+.DS_Store
+Thumbs.db
+
+# IDEs/editors
+.vscode/
+.idea/
+
+# Dependency lockfiles (optional)
+# Uncomment if you don't want to commit these
+# package-lock.json
+# yarn.lock
+
+# Coverage/output/test folders
+coverage/
+dist/
+build/
