@@ -16,6 +16,10 @@ exports.signup = async(req, res) => {
             }
         });
     }catch(err) {
+         if (err.code === '23505') {
+      // unique violation
+      return res.status(409).json({ message: 'Username already exists' });
+    }
         console.error(err);
         res.status(500).json({
             error: err.message
@@ -49,4 +53,9 @@ exports.login = async(req, res) => {
             error: err.message
         });
     }
+};
+exports.profile = async(req, res) => {
+    res.json({
+        message: 'Protected profile',user:req.user
+    });
 };
